@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>TacoNomiks 🌮</h1>
+    <p>Esta página muestra las ventas de tacos por cada estado de la República Mexicana, se puede variar por tipo de
+      taco y observar las ventas por cada día.</p>
+    <p class="disclaimer">Los datos mostrados no son reales, no se debe utilizar esta página como referencia de datos
+      confiables</p>
+    <article class="map-container">
+      <article>
+        <div class="title-container">
+          <h4>Día: <span id="dayText"></span>, Tipo: <span id="typeText"></span></h4>
+        </div>
+        <div id="map"></div>
+      </article>
+      <form id="myForm">
+        <label for="">
+          <p>Elija el día: </p>
+          <input name="day" type="date" value="2023-07-03">
+        </label>
+        <label for="">
+          <p>Elija el tipo:</p>
+          <select name="type">
+            <option value="5">TOTAL</option>
+            <option value="0">De Bistec</option>
+            <option value="1">Al Pastor</option>
+            <option value="2">Mañaneros</option>
+            <option value="3">Quesadillas</option>
+            <option value="4">De Harina</option>
+          </select>
+        </label>
+        <button type="submit">ENVIAR</button>
+      </form>
+    </article>
+
+    <article class="info">
+      <span class="disclaimer font-small">Página creada por Nolan Ashcraft</span>
+      <a>GitHub Link</a>
+    </article>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="mexicoStatesData.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
